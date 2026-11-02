@@ -1,0 +1,22 @@
+import pygame
+from outils_jeu import *
+
+LARGEUR = 1920
+HAUTEUR = 1080
+fenetre = creer_fenetre(LARGEUR, HAUTEUR, "Chromatica : Bleeding Doll")
+noir = (15, 10, 15)
+blanc = (245, 245, 245)
+gris = (210, 175, 175)
+rouge = (140,10, 30)
+rose = (230,20,75)
+
+image_fond = pygame.image.load("open")
+fin = False
+while fin == False:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            fin = True
+
+    pygame.display.flip()
+
+pygame.quit()
